@@ -17,8 +17,7 @@ android {
     compileSdkVersion 28
     buildToolsVersion "29.0.0"
     defaultConfig {
-        applicationId "org.mtc.wallet.test"
-//        applicationId "org.mtc.wallet"
+        applicationId "org.mtc.wallet"
         minSdkVersion 24
         targetSdkVersion 28
         versionCode 3
@@ -43,10 +42,8 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            buildConfigField("String", "BASE_URL", "\"http://101.32.183.23:18080\"")
-            resValue("string","appNameX","MTCWallet_test")
-//            buildConfigField("String", "BASE_URL", "\"https://wapi.metcalfe.network\"")
-//            resValue("string","appNameX","MTCWallet")
+            buildConfigField("String", "BASE_URL", "\"https://wapi.metcalfe.network\"")
+            resValue("string","appNameX","MTCWallet")
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.wangdada
         }
