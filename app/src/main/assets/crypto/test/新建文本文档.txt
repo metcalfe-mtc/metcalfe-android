@@ -1,0 +1,64 @@
+ const wallet = API.wallet.generate();
+    const wallet1 = API.wallet.generate(wallet.secret);
+	
+    let masterKey = API.mnemonic.getMasterKey(wallet.secret);
+    document.write("mnemonic: " + masterKey + "<br/>");
+    let wSecret = API.mnemonic.getSecret(masterKey);
+    document.write("secret:   " + wSecret + "<br/><br/>");
+    //
+
+    const address = "yMhLDdpSeAsVZ5S59ncPB8FwfG4Y5T6zac";
+    const secret = "ss2KvsqE3i1sJWBRntEDrJyB5gE8e";
+    let memoType = API.utils.convertStringToHex("TEXT");
+    let memoData = API.utils.convertStringToHex("hello");
+    const txJson = {
+        "TransactionType": "Payment",
+        "Account": address,
+        "Destination": "yLNW6cchNKdQDpJvQ64gjaGfXCPtHHJE65",
+        "Amount": "1000000",
+        "Fee": "10000",
+        "Memos": [{
+            "Memo": {
+                "MemoType": memoType,
+                "MemoData": memoData
+            }
+        }],
+        "Sequence": 1
+    };
+    // 交易签名
+    const   resSign= sign(txJson, secret);
+    document.write("memoType  : " + memoType+ "<br/>");
+    document.write("memoData  : " + memoData + "<br/>");
+    document.write("hash  : " + resSign.hash + "<br/>");
+    document.write("sign  : " + resSign.txnSignature + "<br/>");
+    document.write("txBlob: " + resSign.txBlob + "<br/><br/>");
+
+
+    // 多签
+    const mTxJson = {
+        "TransactionType": "Payment",
+        "Account": "yDkzUMLXedJiC5tsAcJ9GNFSYvLUJikk1E",
+        "Amount": "1000000",
+        "Destination": "yhXsUTQDfEUy1ydRMBg2RTvgwmNvRZWzJr",
+        "Sequence": 1,
+        "Flags": 2147483648,
+        "Fee": "" + (100 * (2 + 1))
+    };
+
+    console.info(mTxJson);
+    let signedFor = API.signer.signFor(mTxJson, 'shX2ZZPGcAEpuagP1MQoo5PjbNnYv'); //y37RLkJXm3UyjQSYNGeL7wMZCzjXJA1yRf
+    document.write("signedFor:shX2ZZPGcAEpuagP1MQoo5PjbNnYv " + JSON.stringify(signedFor) + "<br/>");
+
+
+	  console.info(mTxJson);
+    let signedFor1 = API.signer.signFor(mTxJson, 'ssdGD8xAXogSEmqtjcx5QmpnqsmGT'); //y4JzY655zBo3P3cFpgJXg5DCqRea1Jejir
+    document.write("signedFor1:ssdGD8xAXogSEmqtjcx5QmpnqsmGT " + JSON.stringify(signedFor1) + "<br/>");
+
+
+  console.info(mTxJson);
+	console.info([signedFor.Signers, signedFor1.Signers]);
+    let combinedTxJson = API.signer.combineSigners(mTxJson, [signedFor.Signers, signedFor1.Signers]);
+    document.write("combinedTxJson: " + JSON.stringify(combinedTxJson) + "<br/>");
+
+    let serialized = API.signer.serialize(combinedTxJson);
+    document.write("serialized: " + JSON.stringify(serialized) + "<br/><br/>");

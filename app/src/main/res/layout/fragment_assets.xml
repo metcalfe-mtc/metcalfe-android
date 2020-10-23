@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#ebeef5"
+    android:orientation="vertical">
+
+    <include layout="@layout/nav_layout" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 钱包信息 -->
+
+            <LinearLayout
+                android:id="@+id/layout_gou_qianbao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:paddingTop="19dp"
+                android:paddingBottom="6dp"
+                android:background="@drawable/shape_curre_bg"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_wallet_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:layout_marginLeft="15dp"
+                    tools:text="钱包名称001 "
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+                    <ImageView
+                        android:layout_width="21dp"
+                        android:layout_height="21dp"
+                        android:text="授信"
+                        android:layout_marginRight="21dp"
+                        android:textColor="#fefefe"
+                        android:src="@mipmap/ic_found"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+                <View
+                    android:layout_marginTop="8dp"
+                    style="@style/LineStyle"
+                    android:visibility="gone"
+                  />
+                <LinearLayout
+                    android:id="@+id/layout_addres"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:paddingRight="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_wallet_addres"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:singleLine="true"
+                        android:ellipsize="middle"
+                        android:layout_marginLeft="15dp"
+                        tools:text="UVASDBDFNSL:FN:LFNLSANFLANFLANSFLFNJKSNFJF "
+                        android:textColor="#333333"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+
+            android:background="@drawable/shape_curre_top_bg"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:layout_marginLeft="19dp"
+                android:text="@string/main_asset_zichan"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+
+            <ImageView
+                android:id="@+id/wallet_save"
+                android:layout_width="76dp"
+                android:layout_height="50dp"
+                android:padding="13dp"
+                android:text="@string/main_asset_shouxin"
+                android:textAllCaps="false"
+                android:textColor="#fefefe"
+                android:src="@mipmap/icon_weibiaoti"
+                android:textSize="11sp" />
+
+     <!--       <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_marginRight="19dp"
+                android:text="@string/main_asset_num"
+                android:textColor="#333333"
+                android:textSize="13sp" />-->
+        </LinearLayout>
+
+            <View
+                style="@style/LineStyle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycle_jil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingLeft="19dp"
+                android:paddingRight="19dp"
+                android:paddingBottom="16dp"
+                android:background="@drawable/selector_bottom"
+                />
+
+
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

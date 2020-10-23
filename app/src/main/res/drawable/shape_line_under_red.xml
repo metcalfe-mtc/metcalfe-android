@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_checked="true">
+        <layer-list>
+            <item>
+                <shape>
+                    <solid android:color="#F04237" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_checked="false">
+        <layer-list>
+            <item>
+                <shape>
+                    <solid android:color="#00FFFFFF" />
+                    <stroke android:width="3px" android:color="#C7C7C7" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+<!--    <item android:state_checked="false">-->
+<!--        <layer-list >-->
+
+<!--            <item-->
+<!--                android:left="-3dp"-->
+<!--                android:right="-3dp"-->
+<!--                android:top="-3dp"-->
+<!--                android:bottom="-3dp">-->
+<!--                <shape>-->
+<!--                    <solid android:color="#00FFFFFF" />-->
+<!--                    <stroke-->
+<!--                        android:width="3px"-->
+<!--                        android:color="#F04237" />-->
+<!--                </shape>-->
+<!--            </item>-->
+
+<!--        </layer-list>-->
+<!--    </item>-->
+<!--    <item android:state_checked="true">-->
+<!--        <layer-list >-->
+<!--            <item-->
+<!--                android:left="-3dp"-->
+<!--                android:right="-3dp"-->
+<!--                android:top="-3dp">-->
+<!--                <shape>-->
+<!--                    <solid android:color="#00FFFFFF" />-->
+<!--                    <stroke-->
+<!--                        android:width="3px"-->
+<!--                        android:color="#F04237" />-->
+<!--                </shape>-->
+<!--            </item>-->
+
+<!--        </layer-list>-->
+<!--    </item>-->
+
+
+
+
+</selector>

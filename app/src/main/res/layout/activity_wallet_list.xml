@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/nav_layout"></include>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:paddingTop="15dp"
+        android:id="@+id/recycle_list_wallet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f2f2f2"
+        />
+</LinearLayout>

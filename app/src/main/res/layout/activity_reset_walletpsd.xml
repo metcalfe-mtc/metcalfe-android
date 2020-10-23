@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fefefe"
+    android:orientation="vertical">
+    <WebView
+        android:id="@+id/creat_webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@android:color/transparent"
+        >
+    </WebView>
+    <include layout="@layout/nav_layout"></include>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <EditText
+            android:id="@+id/edt_old_psd"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:lines="1"
+            android:textSize="14sp"
+            android:hint="@string/reset_jy_in_key">
+
+        </EditText>
+
+        <FrameLayout
+            android:id="@+id/layout_cli_zxing"
+            android:layout_width="46dp"
+            android:layout_height="match_parent"
+            >
+            <ImageView
+                android:id="@+id/lookPwd_old"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="9dp"
+                android:background="@mipmap/ic_scan_11"
+                android:button="@null" />
+        </FrameLayout>
+    </LinearLayout>
+    <View
+        style="@style/LineStyle"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <EditText
+            android:id="@+id/edt_newpsd_1"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:lines="1"
+            android:maxLength="16"
+            android:inputType="textPassword"
+            android:textSize="14sp"
+            android:hint="@string/reset_jy_key_tips">
+
+        </EditText>
+
+        <FrameLayout
+            android:layout_width="46dp"
+            android:layout_height="match_parent"
+            >
+            <CheckBox
+                android:id="@+id/lookPwd_create11"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="9dp"
+                android:background="@drawable/selector_pic_eye"
+                android:button="@null" />
+        </FrameLayout>
+    </LinearLayout>
+    <View
+        style="@style/LineStyle"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <EditText
+            android:id="@+id/edt_newpsd_2"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:lines="1"
+            android:maxLength="16"
+            android:textSize="14sp"
+            android:inputType="textPassword"
+            android:hint="@string/reset_jy_agin_psd"></EditText>
+
+        <FrameLayout
+            android:layout_width="46dp"
+            android:layout_height="match_parent"
+            >
+            <CheckBox
+                android:id="@+id/lookPwd_create12"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="9dp"
+                android:background="@drawable/selector_pic_eye"
+                android:button="@null" />
+        </FrameLayout>
+    </LinearLayout>
+    <View
+        style="@style/LineStyle"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginTop="8dp"
+            android:textSize="11dp"
+            android:text="@string/reset_jy_tisps"
+            ></TextView>
+
+
+
+    <Button
+        android:id="@+id/btn_mdy_pk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="54dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="54dp"
+        android:background="@drawable/selector_btn_bg"
+        android:onClick="onCreateWallte"
+        android:text="@string/reset_jy_save"
+        android:enabled="false"
+        android:textAllCaps="false"
+        android:textColor="#fefefe"
+        android:textSize="15sp" />
+
+
+
+
+</LinearLayout>

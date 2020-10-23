@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#ebeef5"
+    android:orientation="vertical">
+    <WebView
+        android:id="@+id/creat_webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@android:color/transparent"
+        >
+    </WebView>
+    <include layout="@layout/nav_layout" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="68dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/shape_curre_bg"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/layout_mody_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/selector_topm"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+
+                    <TextView
+                        android:id="@+id/txt_w_d_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        tools:text="钱包名称001"
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/icon_bianji"
+                        android:layout_gravity="center"
+                        ></ImageView>
+
+                </LinearLayout>
+
+                <View style="@style/LineStyle"/>
+                <LinearLayout
+                    android:id="@+id/layout_addres"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/selector_bottom"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+
+                    <TextView
+                        android:id="@+id/txt_w_d_addres"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        tools:text="yGWzK14yw9s96TrhsqLsmQo35oMsTYG6CU"
+                        android:textColor="#06243b"
+                        android:singleLine="true"
+                        android:ellipsize="middle"
+                        android:textSize="13sp"
+                        />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_found"
+                        android:layout_gravity="center"
+                        ></ImageView>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="68dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/shape_curre_bg"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/layout_key"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/selector_topm"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/wallet_cha_key"
+                        android:textColor="#333333"
+                        />
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@mipmap/ic_tonext"
+                        android:layout_gravity="center"
+                        ></ImageView>
+
+                </LinearLayout>
+
+                <View style="@style/LineStyle"/>
+                <LinearLayout
+                    android:id="@+id/layout_mody_psd"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/select_witre_sel_bg"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/wallet_mdf_psdf"
+                        android:textColor="#333333"
+                        />
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@mipmap/ic_tonext"
+                        android:layout_gravity="center"
+                        ></ImageView>
+
+                </LinearLayout>
+                <View style="@style/LineStyle"/>
+                <LinearLayout
+                    android:id="@+id/layout_forget_psd"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/select_witre_sel_bg"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/wallet_forg_psdf"
+                        android:textColor="#333333"
+                        />
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@mipmap/ic_tonext"
+                        android:layout_gravity="center"
+                        ></ImageView>
+
+                </LinearLayout>
+                <View style="@style/LineStyle"/>
+                <LinearLayout
+                    android:id="@+id/layout_daochu_zhujici"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/selector_bottom"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/wallet_daochu_zhujic"
+                        android:textColor="#333333"
+                        />
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@mipmap/ic_tonext"
+                        android:layout_gravity="center"
+                        ></ImageView>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/layout_delet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="6dp"
+            android:visibility="gone"
+            android:background="@drawable/shape_curre_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wallet_da_"
+                android:textColor="#FF0101"
+                >
+
+            </TextView>
+        </LinearLayout>
+
+
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

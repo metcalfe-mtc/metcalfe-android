@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/nav_layout" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout_aas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <androidx.core.widget.NestedScrollView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="37dp"
+                    android:gravity="right"
+                    android:text="@string/asset_bi_keyong"
+                    android:textColor="#050505"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txt_vail_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/txt_line_under_bg"
+                    android:gravity="right"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:paddingBottom="6dp"
+                    android:text=""
+                    android:textColor="#282828"
+                    android:textSize="37sp" />
+
+                <TextView
+                    android:id="@+id/txt_dongjie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginBottom="30dp"
+                    android:gravity="right"
+                    android:textColor="#989898"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:id="@+id/layout_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:paddingTop="15dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/selector_top"
+                        android:gravity="center"
+                        android:paddingTop="16dp"
+                        android:text="@string/asset_bi_jiaoyi_jilu"
+                        android:textColor="#333333"
+                        android:textSize="16sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycle_list_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/selector_bottom" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <Button
+        android:id="@+id/btn_zhuanchu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="54dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="54dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/selector_btn_bg"
+        android:onClick="onNextWallte"
+        android:text="@string/asset_bi_zhuchuan"
+        android:textAllCaps="false"
+        android:textColor="#fefefe"
+        android:textSize="15sp" />
+
+</LinearLayout>

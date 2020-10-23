@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/nav_layout" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingTop="36dp"
+        android:paddingBottom="36dp"
+        >
+
+        <ImageView
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/icon" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MTCWallet"
+            android:textColor="#282828"
+            android:textSize="17sp"
+            android:gravity="left"
+            />
+        <TextView
+            android:id="@+id/about_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#989898"
+            android:textSize="12sp"
+            android:gravity="left"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_about"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#ffffff"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_scan_11"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            ></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/about_us_ifon"
+            android:textColor="#282828"
+            android:textSize="14sp"
+            android:gravity="left"
+            />
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@mipmap/ic_tonext"
+            android:layout_gravity="center"
+            ></ImageView>
+    </LinearLayout>
+    <View
+        style="@style/LineStyle"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/layout_fuwutiao"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#ffffff"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_scan_11"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            ></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/about_ws_tk"
+            android:textColor="#282828"
+            android:textSize="14sp"
+            android:gravity="left"
+            />
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@mipmap/ic_tonext"
+            android:layout_gravity="center"
+            ></ImageView>
+    </LinearLayout>
+    <View
+        style="@style/LineStyle"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/layout_qrc"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#ffffff"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_scan_11"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            ></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about_ws_wt"
+            android:textColor="#282828"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:background="#ffffff"
+            />
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@mipmap/ic_tonext"
+            android:layout_gravity="center"
+            ></ImageView>
+    </LinearLayout>
+    <View
+        style="@style/LineStyle"
+        />
+    <LinearLayout
+        android:id="@+id/layout_version"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#ffffff"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_scan_11"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            ></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about_ws_visoninfo"
+            android:textColor="#282828"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:background="#ffffff"
+            />
+        <TextView
+            android:id="@+id/txt_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="new"
+            android:background="@drawable/shape_red_bg"
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            android:paddingLeft="9dp"
+            android:paddingRight="9dp"
+            />
+        <!-- 989898 -->
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@mipmap/ic_tonext"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            ></ImageView>
+    </LinearLayout>
+
+</LinearLayout>

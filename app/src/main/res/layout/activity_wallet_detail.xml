@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <include layout="@layout/nav_layout" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="68dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/shape_curre_bg"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zichan_detail_fukuanafng"
+                    android:paddingLeft="20dp"
+                    android:textColor="#999999"
+                    android:textSize="14sp"
+                    android:gravity="left"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+
+                    <TextView
+                        android:id="@+id/txt_fuKuan_addres"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#ffffff"
+                        tools:text="yUyU3QzEwvCb2eW6aGwQ7mph"
+                        android:textColor="#06243b"
+                        />
+                    <ImageView
+                        android:id="@+id/img_fuKuan_addres"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:padding="10dp"
+                        android:src="@mipmap/ic_copy"
+                        android:layout_gravity="center"
+                        ></ImageView>
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zichan_detail_shoukuanfang"
+                    android:paddingLeft="20dp"
+                    android:textColor="#999999"
+                    android:textSize="14sp"
+                    android:gravity="left"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+
+                    <TextView
+                        android:id="@+id/txt_shouKuan_addres"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#ffffff"
+                        tools:text="UyU3QzEwvCb2eW6aGwQ7mph28Kfa1qn7R"
+                        android:textColor="#06243b"
+                        android:textSize="14sp"
+                        />
+                    <ImageView
+                        android:id="@+id/imag_shouKuan_addres"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:padding="10dp"
+                        android:src="@mipmap/ic_copy"
+                        android:layout_gravity="center"
+                        ></ImageView>
+
+                </LinearLayout>
+
+                <View style="@style/LineStyle"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="68dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/shape_curre_bg"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:text="@string/zichan_detail_jine"
+                        android:textColor="#999999"
+                        android:textSize="14sp"
+                        />
+                    <TextView
+                        android:id="@+id/txt_jine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        tools:text="102.020236540236543654 M"
+                        android:textColor="#06243b"
+                        android:gravity="right"
+                        />
+
+                </LinearLayout>
+
+                <View style="@style/LineStyle"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="#ffffff"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:text="@string/zichan_detail_fee"
+                        android:textColor="#999999"
+                        android:textSize="14sp"
+                        />
+                    <TextView
+                        android:id="@+id/txt_fee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        tools:text="102.020236540236543654 M"
+                        android:textColor="#06243b"
+                        android:gravity="right"
+                        />
+
+                </LinearLayout>
+                <View style="@style/LineStyle"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="#ffffff"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:text="@string/zichan_detail_jiaoyi_leixa"
+                        android:textColor="#999999"
+                        android:textSize="14sp"
+                        />
+                    <TextView
+                        android:id="@+id/txt_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        tools:text="102.020236540236543654 M"
+                        android:textColor="#06243b"
+                        android:gravity="right"
+                        />
+
+                </LinearLayout>
+                <View style="@style/LineStyle"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:background="#ffffff"
+                        android:text="@string/zichan_detail_stutae"
+                        android:textColor="#999999"
+                        android:textSize="14sp"
+                        />
+                    <TextView
+                        android:id="@+id/txt_statue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="#06243b"
+                        android:gravity="right"
+                        />
+                    <ProgressBar
+                        android:id="@+id/txt_statue_p"
+                        android:layout_width="19dp"
+                        android:layout_height="19dp">
+                    </ProgressBar>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="68dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/shape_curre_bg"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zichan_detail_hash"
+                    android:paddingLeft="20dp"
+                    android:textColor="#999999"
+                    android:textSize="14sp"
+                    android:gravity="left"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+
+                    <TextView
+                        android:id="@+id/txt_hash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#ffffff"
+                        tools:text="UyU3QzEwvCb2eW6aGwQ7mph28Kfa1qn7R"
+                        android:textColor="#06243b"
+                        />
+                    <ImageView
+                        android:id="@+id/img_hash"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:padding="10dp"
+                        android:src="@mipmap/ic_copy"
+                        android:layout_gravity="center"
+                        ></ImageView>
+
+                </LinearLayout>
+
+                <View style="@style/LineStyle"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="#ffffff"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:text="@string/zichan_detail_block"
+                        android:textColor="#999999"
+                        android:textSize="14sp"
+                        />
+                    <TextView
+                        android:id="@+id/txt_block"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="#06243b"
+                        android:gravity="right"
+                        />
+                    <ProgressBar
+                        android:id="@+id/txt_statue_b"
+                        android:layout_width="19dp"
+                        android:layout_height="19dp">
+                    </ProgressBar>
+
+                </LinearLayout>
+                <View style="@style/LineStyle"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="55dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:text="@string/zichan_detail_tiime"
+                        android:textColor="#999999"
+                        android:textSize="14sp"
+                        />
+                    <TextView
+                        android:id="@+id/txt_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textColor="#06243b"
+                        android:gravity="right"
+                        />
+                    <ProgressBar
+                        android:id="@+id/txt_statue_t"
+                        android:layout_width="19dp"
+                        android:layout_height="19dp">
+                    </ProgressBar>
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/layout_beizhu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="68dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="6dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:visibility="gone"
+            android:background="@drawable/shape_curre_bg"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zichan_detail_beizhu"
+                android:textColor="#999999"
+                android:textSize="14sp"
+                android:gravity="left"
+                />
+            <TextView
+                android:id="@+id/txt_beizhu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text=""
+                android:textColor="#06243b"
+                android:gravity="left"
+                />
+
+        </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/tag_bg_1"
+    android:text="Helloworld"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="4dp"
+    android:paddingTop="4dp"
+    android:textColor="@drawable/text_color_1">
+
+</TextView>

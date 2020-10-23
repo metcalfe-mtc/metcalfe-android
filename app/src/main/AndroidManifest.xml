@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.lang.progrom">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/appNameX"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:name="com.lang.ktn.base.BaseAppliton"
+        tools:replace="android:label"
+        android:theme="@style/AppTheme">
+
+        <activity android:name="com.lang.ktn.ui.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.lang.ktn.ui.Kt"/>
+        <activity android:name="com.lang.ktn.ui.wallet.CreaterWallteActivity"/>
+        <activity android:name="com.lang.ktn.ui.wallet.zhujici.BackupsActivity"/>
+        <activity android:name="com.lang.ktn.ui.wallet.zhujici.RememberActivity"/>
+        <activity android:name="com.lang.ktn.ui.wallet.improt.ImportWalletActivity"/>
+        <activity android:name="com.lang.ktn.ui.main.MainActivity"/>
+        <activity android:name="com.lang.ktn.ui.web.WebViewActivity"/>
+        <activity android:name="com.lang.ktn.ui.wallet.shouxin.WalletAssetActivity"/>
+        <activity android:name="com.lang.ktn.ui.wallet.shouxin.WalletRecodeActivity"/>
+        <activity android:name="com.lang.ktn.ui.manage.WalletAddressActivity"/>
+        <activity android:name="com.lang.ktn.ui.manage.WalletKeyActivity"/>
+        <activity android:name="com.lang.ktn.ui.manage.WalletActivity"/>
+        <activity android:name="com.lang.ktn.ui.manage.WalletListActivity"/>
+        <activity android:name="com.lang.ktn.ui.main.AssetListActivity"/>
+        <activity android:name="com.lang.ktn.ui.main.AssetListDeatilActivity"/>
+        <activity android:name="com.lang.ktn.ui.main.ZhuanChuActivity"/>
+        <activity android:name="com.lang.ktn.ui.setting.AboutUsActivity"/>
+        <activity android:name="com.lang.ktn.ui.manage.WalletListMActivity"/>
+        <activity android:name="com.lang.ktn.ui.wallet.ModifyNameActivity"/>
+        <activity android:name="com.lang.ktn.ui.wallet.ModefyWalltePsdActivity"/>
+        <activity android:name="com.lang.ktn.ui.wallet.ModefyResetWalltePsdActivity"/>
+        <activity android:name="com.lang.ktn.ui.wallet.zhujici.CopyWorldActivity"/>
+        <activity android:name="com.lang.ktn.ui.home.HomeActivity"/>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths_public" />
+        </provider>
+
+    </application>
+
+</manifest>

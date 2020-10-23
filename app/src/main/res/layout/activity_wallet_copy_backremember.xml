@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include layout="@layout/nav_layout"></include>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/back_ac_ok_info"
+                android:textColor="#ff0000"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:textSize="13sp"
+                android:gravity="left"
+                />
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:id="@+id/id_flowlayout"
+                zhy:max_select="-1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="130dp"
+                android:padding="20dp">
+            </com.zhy.view.flowlayout.TagFlowLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="54dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginRight="54dp"
+                android:background="@drawable/selector_btn_bg"
+                android:onClick="onOkWallte"
+                android:text="@string/back_ac_ok_ok"
+                android:textAllCaps="false"
+                android:textColor="#fefefe"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</LinearLayout>

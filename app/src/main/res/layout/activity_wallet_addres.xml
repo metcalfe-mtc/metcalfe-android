@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <include layout="@layout/nav_layout" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="68dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/shape_curre_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_addres"
+                android:layout_marginTop="19dp"
+                android:layout_width="163dp"
+                android:layout_height="163dp"
+                android:layout_gravity="center"
+                android:background="#789"
+                />
+
+            <TextView
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:layout_marginBottom="19dp"
+                android:background="@drawable/selector_btn_bg"
+                android:gravity="center"
+                android:onClick="onSave"
+                android:paddingTop="9dp"
+                android:paddingBottom="9dp"
+                android:text="@string/wallet_save_xc_pic"
+                android:textColor="#fefefe"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="68dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/shape_curre_bg"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/img_addres_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    tools:text="yUyU3QzEwvCb2eWyUyU3QzEwvCb2eW6aGwQ7mph28Kfa1qyUyU3QzEwvCb2eW6aGwQ7mph28Kfa1q6aGwQ7mph28Kfa1q"
+                    android:textColor="#282828"
+                    android:ellipsize="middle"
+                    android:layout_gravity="center"
+                    android:textSize="15sp"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:layout_width="136dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="9dp"
+                    android:paddingBottom="9dp"
+                    android:layout_marginLeft="54dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginRight="54dp"
+                    android:layout_marginBottom="19dp"
+                    android:gravity="center"
+                    android:onClick="onCopy"
+                    android:background="@drawable/selector_btn_bg"
+                    android:text="@string/wallet_save_copy_add"
+                    android:textColor="#fefefe"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

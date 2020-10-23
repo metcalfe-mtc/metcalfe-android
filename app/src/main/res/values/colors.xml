@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#06243b</color>
+    <color name="colorPrimaryDark">#06243b</color>
+    <color name="colorAccent">#06243b</color>
+    <color name="theme_light">#E9E9E9</color>
+    <color name="grey2">#CCCCCC</color>
+    <color name="color_007aFF">#007aFF</color>
+    <color name="color_ebeef5">#ebeef5</color>
+
+    <dimen name="jiaoyu">25dp</dimen>
+    <integer name="psdsize">8</integer>
+    <color name="trade_green">#6fb488</color>
+</resources>

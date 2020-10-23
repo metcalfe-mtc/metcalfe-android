@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <include layout="@layout/nav_layout" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/shape_curre_bg"
+                android:gravity="center_vertical"
+                android:minHeight="68dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_addres"
+                    android:layout_width="163dp"
+                    android:layout_height="163dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="19dp"
+                    android:layout_marginBottom="19dp"
+                    android:background="#789" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="54dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginRight="54dp"
+                    android:layout_marginBottom="19dp"
+                    android:background="@drawable/selector_btn_bg"
+                    android:gravity="center"
+                    android:paddingTop="9dp"
+                    android:onClick="onSave"
+                    android:visibility="gone"
+                    android:paddingBottom="9dp"
+                    android:text="@string/wallet_save_xc_pic"
+                    android:textColor="#fefefe"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/shape_curre_bg"
+                android:gravity="center_vertical"
+                android:minHeight="68dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/img_addres_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    tools:text="yUyU3yUyU3QzEwvCb2eW6aGwQ7mph28Kfa1qyUyU3QzEwvCb2eW6aGwQ7mph28Kfa1qQzEwvCb2eW6aGwQ7mph28Kfa1q"
+                    android:textColor="#282828"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="54dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginRight="54dp"
+                    android:layout_marginBottom="19dp"
+                    android:background="@drawable/selector_btn_bg"
+                    android:gravity="center"
+                    android:paddingTop="9dp"
+                    android:paddingBottom="9dp"
+                    android:onClick="onCopy"
+                    android:text="@string/wallet_key_cp"
+                    android:textColor="#fefefe"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:gravity="left"
+                android:text="@string/wallet_tips_warn"
+                android:textColor="#8c8d8d"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

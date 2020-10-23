@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/nav_layout"></include>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="16dp"
+        >
+        <WebView
+            android:id="@+id/creat_webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            >
+        </WebView>
+
+        <EditText
+            android:id="@+id/edt_name"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="@android:color/white"
+            android:lines="1"
+            android:maxLength="16"
+            android:textSize="14sp"
+            android:hint="@string/create_wallet_input_name"></EditText>
+    </FrameLayout>
+
+    <View
+        style="@style/LineStyle"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <EditText
+            android:id="@+id/edt_psd1"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:textSize="14sp"
+            android:inputType="textPassword"
+            android:hint="@string/create_wallet_setpsd1"
+            android:lines="1"
+            android:maxLength="16">
+
+        </EditText>
+
+        <FrameLayout
+            android:layout_width="46dp"
+            android:layout_height="match_parent">
+
+            <CheckBox
+                android:id="@+id/lookPwd_create1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_pic_eye"
+                android:button="@null"
+                android:paddingLeft="9dp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <View
+        style="@style/LineStyle"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <EditText
+            android:id="@+id/edt_psd2"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:textSize="14sp"
+            android:hint="@string/create_wallet_set_psd2"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:maxLength="16"></EditText>
+
+        <FrameLayout
+            android:layout_width="46dp"
+            android:layout_height="match_parent">
+
+            <CheckBox
+                android:id="@+id/lookPwd2_create2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_pic_eye"
+                android:button="@null"
+                android:paddingLeft="9dp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <View
+        style="@style/LineStyle"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/create_wallet_info_tips"
+        android:textSize="11dp"></TextView>
+
+
+    <Button
+        android:id="@+id/btn_create_wallet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="54dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="54dp"
+        android:background="@drawable/selector_btn_bg"
+        android:onClick="onCreateWallte"
+        android:enabled="false"
+        android:text="@string/create_wallet_ok"
+        android:textAllCaps="false"
+        android:textColor="#fefefe"
+        android:textSize="15sp" />
+
+
+</LinearLayout>

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#ebeef5"
+    android:layout_height="match_parent">
+    <include layout="@layout/nav_layout" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:paddingTop="36dp"
+        android:paddingBottom="36dp"
+        >
+
+        <ImageView
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/icon" />
+         <TextView
+             android:id="@+id/mine_txt_version"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_marginTop="6dp"
+             android:gravity="center"
+             android:textColor="@android:color/white"
+             />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_wallet_guanli"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/select_witre_sel_bg"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <ImageView
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:src="@mipmap/qianbao"
+            android:layout_gravity="center"
+            ></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:text="@string/main_mine_guanli"
+            android:textColor="#282828"
+            />
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@mipmap/ic_tonext"
+            android:layout_gravity="center"
+            ></ImageView>
+    </LinearLayout>
+    <View
+        style="@style/LineStyle"
+        />
+
+    <LinearLayout
+        android:id="@+id/layout_fuwuxieyi"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/select_witre_sel_bg"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <ImageView
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:src="@mipmap/mine_xieyi"
+            android:layout_gravity="center"
+            ></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:text="@string/about_ws_tk"
+            android:textColor="#282828"
+            />
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@mipmap/ic_tonext"
+            android:layout_gravity="center"
+            ></ImageView>
+    </LinearLayout>
+    <View
+        style="@style/LineStyle"
+        />
+
+    <LinearLayout
+        android:id="@+id/layout_faq"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/select_witre_sel_bg"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <ImageView
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:src="@mipmap/mine_qrc"
+            android:layout_gravity="center"
+            ></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:text="@string/about_ws_wt"
+            android:textColor="#282828"
+            />
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@mipmap/ic_tonext"
+            android:layout_gravity="center"
+            ></ImageView>
+    </LinearLayout>
+    <View
+        style="@style/LineStyle"
+        />
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_yuyan"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/select_witre_sel_bg"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <ImageView
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:src="@mipmap/guanyuwomen"
+            android:layout_gravity="center"
+            ></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:text="@string/main_mine_abouu"
+            android:textColor="#282828"
+            />
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@mipmap/ic_tonext"
+            android:layout_gravity="center"
+            ></ImageView>
+    </LinearLayout>
+    <View
+        style="@style/LineStyle"
+        />
+    <LinearLayout
+        android:id="@+id/layout_yuyan_fyab"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/select_witre_sel_bg"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <ImageView
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:src="@mipmap/yuyan"
+            android:layout_gravity="center"
+            ></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:text="@string/main_mine_langue"
+            android:textColor="#282828"
+            />
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@mipmap/ic_tonext"
+            android:layout_gravity="center"
+            ></ImageView>
+    </LinearLayout>
+    <View
+        style="@style/LineStyle"
+        />
+    <LinearLayout
+        android:id="@+id/layout_versionX"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#ffffff"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <ImageView
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:src="@mipmap/mine_version"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            ></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about_ws_visoninfo"
+            android:textColor="#282828"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"
+            android:textSize="14sp"
+            android:background="#ffffff"
+            />
+        <TextView
+            android:id="@+id/txt_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="new"
+            android:background="@drawable/shape_red_bg"
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            android:paddingLeft="9dp"
+            android:paddingRight="9dp"
+            android:visibility="gone"
+            />
+        <!-- 989898 -->
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@mipmap/ic_tonext"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            ></ImageView>
+    </LinearLayout>
+
+
+
+</LinearLayout>

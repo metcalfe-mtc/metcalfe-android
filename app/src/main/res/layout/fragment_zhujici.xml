@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/edt_sercert"
+        android:layout_width="match_parent"
+        android:layout_height="131dp"
+        android:hint="@string/input_zjc_splite"
+        android:padding="8dp"
+        android:textColor="#333333"
+        android:background="#abffffff"
+        android:textSize="14sp"
+        android:gravity="left"
+        />
+    <!--     android:text="BODE DATE    ONTO   FISH AMOS LEEK PER TILE KNOT HIGH SEWN RIO" -->
+    <View
+        style="@style/LineStyle"
+        android:layout_height="8dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:paddingLeft="16dp"
+        android:paddingTop="11dp"
+        android:paddingBottom="11dp"
+        android:text="@string/import_wallet_setps_tips"
+        android:textColor="#282828"
+        android:textSize="15sp"
+        android:gravity="left"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <EditText
+            android:id="@+id/edt_newpsd_1"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:lines="1"
+            android:maxLength="16"
+            android:inputType="textPassword"
+            android:textSize="14sp"
+            android:hint="@string/import_wallet_psd1">
+
+        </EditText>
+
+        <FrameLayout
+            android:layout_width="46dp"
+            android:layout_height="match_parent"
+            >
+            <CheckBox
+                android:id="@+id/lookPwd_zhujici1"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="9dp"
+                android:background="@drawable/selector_pic_eye"
+                android:button="@null" />
+        </FrameLayout>
+    </LinearLayout>
+    <View
+        style="@style/LineStyle"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <EditText
+            android:id="@+id/edt_newpsd_2"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:lines="1"
+            android:inputType="textPassword"
+            android:textSize="14sp"
+            android:maxLength="16"
+            android:hint="@string/import_wallet_psd2">
+
+        </EditText>
+
+        <FrameLayout
+            android:layout_width="46dp"
+            android:layout_height="match_parent"
+            >
+            <CheckBox
+                android:id="@+id/lookPwd_zhujici2"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="9dp"
+                android:background="@drawable/selector_pic_eye"
+                android:button="@null" />
+        </FrameLayout>
+    </LinearLayout>
+    <View
+        style="@style/LineStyle"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="11dp"
+        android:paddingBottom="11dp"
+        android:gravity="right"
+        android:text="@string/import_wallet_psd_info"
+        android:textColor="#989696"
+        android:textSize="11sp"
+        />
+
+    <Button
+        android:id="@+id/btn_mdy_pk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="54dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="54dp"
+        android:textAllCaps="false"
+        android:background="@drawable/selector_btn_bg"
+        android:text="@string/import_wallet_save"
+        android:enabled="false"
+        android:textColor="#fefefe"
+        android:textSize="15sp" />
+
+
+</LinearLayout>

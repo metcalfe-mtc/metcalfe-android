@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_item"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen32"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen20"
+        android:paddingRight="@dimen/dimen20">
+
+        <TextView
+            android:id="@+id/historical_offer_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/trade_green"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dimen8"
+            android:paddingTop="@dimen/dimen2"
+            android:paddingRight="@dimen/dimen8"
+            android:paddingBottom="@dimen/dimen2"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_12"
+            tools:text="买" />
+
+        <TextView
+            android:id="@+id/historical_pair"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dimen5"
+            android:gravity="center_vertical"
+            android:textColor="#738699"
+            android:textSize="@dimen/text_12"
+            tools:text="ETH/USDT" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/historical_list_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|right"
+            android:paddingLeft="@dimen/dimen6"
+            android:paddingTop="@dimen/dimen2"
+            android:paddingRight="@dimen/dimen6"
+            android:paddingBottom="@dimen/dimen2"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_12"
+            tools:text="" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#E1E1E1"
+        android:layerType="software" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dimen9"
+        android:layout_marginBottom="@dimen/dimen4"
+        android:paddingLeft="@dimen/dimen20"
+        android:paddingRight="@dimen/dimen20">
+
+        <TextView
+            android:id="@+id/tv_price_part"
+            android:layout_width="@dimen/dimen0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="数量"
+            android:textColor="#4C5966"
+            android:textSize="@dimen/text_14"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_num_part"
+            android:layout_width="@dimen/dimen0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="数量"
+            android:textColor="#4C5966"
+            android:textSize="@dimen/text_10" />
+
+        <TextView
+            android:id="@+id/tv_sum_main"
+            android:layout_width="@dimen/dimen0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#4C5966"
+            android:gravity="center_vertical"
+            android:text="数量"
+            android:textSize="@dimen/text_10" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/dimen8"
+        android:paddingLeft="@dimen/dimen20"
+        android:paddingRight="@dimen/dimen20">
+
+        <TextView
+            android:id="@+id/historical_price"
+            android:layout_width="@dimen/dimen0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="none"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="0.009879BTH"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_12"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/historical_buy"
+            android:layout_width="@dimen/dimen0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="none"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="#4C5966"
+            android:textSize="@dimen/text_14"
+            tools:text="0.001090ETH" />
+
+        <TextView
+            android:id="@+id/historical_sell"
+            android:layout_width="@dimen/dimen0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="none"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="#4C5966"
+            android:textSize="@dimen/text_14"
+            tools:text="0.10100BTH" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen8"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/historical_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dimen20"
+            android:textColor="#738699"
+            android:textSize="@dimen/text_12"
+            tools:text="手续费：0.0005 SDA" />
+
+        <TextView
+            android:id="@+id/historical_offer_num"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:paddingRight="@dimen/dimen20"
+            android:textSize="@dimen/text_12"
+            android:textColor="#738699"
+            tools:text="挂单量：200000ETH" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/dimen20"
+        android:background="#E1E1E1"
+        android:layerType="software" />
+
+    <TextView
+        android:id="@+id/historical_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical|right"
+        android:paddingRight="@dimen/dimen20"
+        android:textSize="@dimen/text_12"
+        android:textColor="#738699"
+        tools:text="2018-10-10 15:06:01" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="#F6F6F6" />
+
+</LinearLayout>

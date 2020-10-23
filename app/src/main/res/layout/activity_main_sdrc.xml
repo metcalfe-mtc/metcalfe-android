@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </WebView>
+
+        <FrameLayout
+            android:id="@+id/layFrame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    <!--    <androidx.viewpager.widget.ViewPager-->
+    <!--    <com.lang.ktn.widget.UnViewPager
+            android:id="@+id/vp_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />-->
+    </FrameLayout>
+
+
+
+
+    <com.flyco.tablayout.CommonTabLayout
+        android:id="@+id/tab_login"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#fff"
+        app:tl_iconVisible="true"
+        app:tl_indicator_margin_top="3dp"
+        app:tl_indicator_margin_bottom="3dp"
+        tl:tl_indicator_bounce_enable="false"
+        app:tl_textSelectColor="#2A2A2A"
+        app:tl_textUnselectColor="#999999"
+      />
+<!--    <com.flyco.tablayout.CommonTabLayout
+        android:id="@+id/tab_login"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="#fff"
+        app:tl_iconVisible="false"
+        app:tl_indicator_color="@android:color/holo_red_light"
+        app:tl_indicator_corner_radius="1.5dp"
+        app:tl_indicator_height="2dp"
+        app:tl_indicator_width="46dp"
+        app:tl_textSelectColor="@android:color/holo_red_light"
+        app:tl_textUnselectColor="#888888"
+        app:tl_textsize="18sp" />-->
+
+</LinearLayout>

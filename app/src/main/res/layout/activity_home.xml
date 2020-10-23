@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/home_bg"
+    android:gravity="center_horizontal|center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="69dp"
+        android:layout_height="69dp"
+        android:src="@drawable/icon" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen11"
+        android:text="Metcalfe-Wallet"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="@dimen/text_37" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:src="@mipmap/home_left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="@string/home_guanli_str_info"
+            android:textColor="#ffffff"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:src="@mipmap/home_right" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="54dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="54dp"
+        android:background="@drawable/selector_btn_bg"
+        android:onClick="onCreateWallte"
+        android:text="@string/home_create_wallet"
+        android:textAllCaps="false"
+        android:textColor="#fefefe"
+        android:textSize="15sp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="54dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginRight="54dp"
+        android:background="@drawable/selector_btn_white_bg"
+        android:onClick="onImPortWallte"
+        android:text="@string/home_import_wallet"
+        android:textAllCaps="false"
+        android:textColor="#06243b"
+        android:textSize="15sp" />
+
+</LinearLayout>

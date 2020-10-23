@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/nav_layout"></include>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@null"
+        android:lines="1"
+        android:maxLength="16"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="16dp"
+        android:hint="资产代码"></EditText>
+
+    <View
+        style="@style/LineStyle"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@null"
+        android:lines="1"
+        android:maxLength="16"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="16dp"
+        android:hint="发行方账号"></EditText>
+
+
+    <View
+        style="@style/LineStyle"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="54dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="54dp"
+        android:background="@drawable/selector_btn_bg"
+        android:onClick="onCreateWallte"
+        android:text="保存"
+        android:textColor="#fefefe"
+        android:textSize="15sp" />
+
+
+</LinearLayout>

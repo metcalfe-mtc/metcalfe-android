@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/nav_layout"></include>
+
+    <WebView
+        android:id="@+id/creat_webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@android:color/transparent"
+        >
+    </WebView>
+    <com.flyco.tablayout.CommonTabLayout
+        android:id="@+id/tab_login"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="#fff"
+        app:tl_iconVisible="false"
+        app:tl_indicator_color="@android:color/holo_red_light"
+        app:tl_indicator_corner_radius="1.5dp"
+        app:tl_indicator_height="2dp"
+        app:tl_indicator_width="46dp"
+        app:tl_textSelectColor="@android:color/holo_red_light"
+        app:tl_textUnselectColor="#888888"
+        app:tl_textsize="18sp" />
+    <View
+        style="@style/LineStyle"
+        />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+</LinearLayout>

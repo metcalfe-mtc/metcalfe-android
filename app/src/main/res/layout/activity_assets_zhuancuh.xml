@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <include layout="@layout/nav_layout" />
+
+    <WebView
+        android:id="@+id/creat_webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@android:color/transparent"
+        >
+    </WebView>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="16dp"
+                android:paddingRight="20dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/zhuanchu_skf_pre"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/layout_scan"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:padding="5dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_scan_11"></ImageView>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edt_txt_addres"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textSize="14sp"
+                android:hint="@string/accept_address"
+                android:textColor="#06243b"
+                android:background="@null" />
+
+            <View style="@style/LineStyle" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="16dp"
+                android:paddingRight="20dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/zhuanchu_tips"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_scan_11"
+                    android:visibility="gone"></ImageView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+
+                <!--    android:hint="@string/available_1000_sde" -->
+
+                <EditText
+                    android:id="@+id/edt_moeny_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    android:textColor="#06243b"
+                    android:inputType="numberDecimal"
+                    android:background="@null" />
+
+                <TextView
+                    android:id="@+id/allTx_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="19dp"
+                    android:paddingRight="19dp"
+                    android:text="@string/zhuanchu_all"
+                    android:textColor="#06243b"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <View style="@style/LineStyle" />
+
+            <TextView
+                android:id="@+id/txt_fee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingTop="4dp"
+                android:paddingRight="16dp"
+                tools:text="手续费： 0.0001 M"
+                android:textColor="#9E9D9D"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="16dp"
+                android:paddingRight="20dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/zhuanchu_beizhu"
+                    android:textColor="#333333"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_scan_11"
+                    android:visibility="gone"></ImageView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+
+                <EditText
+                    android:id="@+id/txt_motor"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    android:hint="@string/memo_optional"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    android:textColor="#06243b"
+                    android:background="@null" />
+
+            </LinearLayout>
+
+            <View style="@style/LineStyle" />
+
+            <Button
+                android:id="@+id/btn_zhuanchu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="54dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginRight="54dp"
+                android:layout_marginBottom="6dp"
+                android:enabled="false"
+                android:background="@drawable/selector_btn_bg"
+                android:onClick="onNextWallte"
+                android:text="@string/zhuanchu_btn_str"
+                android:textAllCaps="false"
+                android:textColor="#fefefe"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>
