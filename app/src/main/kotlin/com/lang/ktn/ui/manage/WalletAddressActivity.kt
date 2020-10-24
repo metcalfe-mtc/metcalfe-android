@@ -38,7 +38,7 @@ class WalletAddressActivity : BaseActivity() {
         nav_img_left.setOnClickListener{ finish() }
 
         nav_right.setText(getString(R.string.wallet_adss_key))
-        nav_right.visibility = View.VISIBLE
+        nav_right.visibility = View.GONE
         nav_right.setOnClickListener {
 
             showDialogSelPsd(this) { psd: String, dialog: Dialog, txt_infoView: TextView ->

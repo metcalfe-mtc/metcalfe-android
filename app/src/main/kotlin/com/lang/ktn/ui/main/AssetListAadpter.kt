@@ -51,10 +51,10 @@ class AssetListAadpter(
         val bean = weekForecast[position]
         if (currency == bean.account) {
             holder.txt_churu.setText(R.string.zichan_list_zhuanchu)
-            holder.txt_churu.setTextColor(Color.RED)
+            holder.txt_churu.setTextColor(Color.BLUE)
         } else {
             holder.txt_churu.setText(R.string.zichan_list_zhuanru)
-            holder.txt_churu.setTextColor(Color.BLUE)
+            holder.txt_churu.setTextColor(Color.RED)
         }
         holder.txt_coin_time.setText(getTextName(bean.date))
 
@@ -68,17 +68,38 @@ class AssetListAadpter(
             var allMoeny =
                 bean.amount?.value?.toLong()!!.div(Math.pow(10.0, bean.amount.decimals.toDouble()))
                     .toString()
-            holder.txt_icon_jine.setText(
-                allMoeny.toBigDecimal().stripTrailingZeros().toPlainString()
-            ) // + Constant.CURRN
+            if (currency == bean.account) {
+                holder.txt_icon_jine.setText(
+                    "- " + allMoeny.toBigDecimal().stripTrailingZeros().toPlainString()
+                ) // + Constant.CURRN
+            } else {
+                holder.txt_icon_jine.setText(
+                    "+ " + allMoeny.toBigDecimal().stripTrailingZeros().toPlainString()
+                ) // + Constant.CURRN
+            }
+
         } else if ("M".equals(bean.amount?.currency)) {
-            holder.txt_icon_jine.setText(
-                bean.amount?.value?.toBigDecimal().divide(BigDecimal("1000000")).stripTrailingZeros().toPlainString()
-            )// + bean.amount?.currency
+            if (currency == bean.account) {
+                holder.txt_icon_jine.setText(
+                    "- " + bean.amount?.value?.toBigDecimal().divide(BigDecimal("1000000"))
+                        .stripTrailingZeros().toPlainString()
+                )// + bean.amount?.currency
+            } else {
+                holder.txt_icon_jine.setText(
+                    "+ " + bean.amount?.value?.toBigDecimal().divide(BigDecimal("1000000"))
+                        .stripTrailingZeros().toPlainString()
+                )// + bean.amount?.currency
+            }
         } else {
-            holder.txt_icon_jine.setText(
-                bean.amount?.value?.toBigDecimal().stripTrailingZeros().toPlainString()
-            )// + bean.amount?.currency
+            if (currency == bean.account) {
+                holder.txt_icon_jine.setText(
+                   "- "+ bean.amount?.value?.toBigDecimal().stripTrailingZeros().toPlainString()
+                )// + bean.amount?.currency
+            }else{
+                holder.txt_icon_jine.setText(
+                    "+ "+ bean.amount?.value?.toBigDecimal().stripTrailingZeros().toPlainString()
+                )// + bean.amount?.currency
+            }
         }
         holder.itemView.setOnClickListener {
             itemClick(bean)

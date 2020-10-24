@@ -19,7 +19,7 @@
     <string name="back_ac_info">掌握助记词即拥有资产所有权</string>
     <string name="back_ac_t1">正确抄写助记词，可在需要时重新导入该钱包</string>
     <string name="back_ac_t2">离线保管，保障资产安全</string>
-    <string name="back_ac_t3">切勿截屏保存，可能会造成资产</string>
+    <string name="back_ac_t3">切勿截屏保存，可能会造成资产损失</string>
     <string name="back_ac_btn">下一步</string>
 
     <string name="back_ac_ok_title">备份确认</string>
@@ -73,7 +73,7 @@
     <string name="zhuanchu_skf_pre">收款方</string>
     <string name="zhuanchu_tips">转出金额</string>
     <string name="zhuanchu_all">全部</string>
-    <string name="zhuanchu_beizhu">备注</string>
+    <string name="zhuanchu_beizhu">Memo</string>
     <string name="zhuanchu_btn_str">提交</string>
     <string name="dialog_psd_error">密码输入错误</string>
     <string name="zhuanchu_addres_eorr">无效地址</string>
@@ -94,7 +94,7 @@
     <string name="zichan_detail_hash">交易哈希</string>
     <string name="zichan_detail_block">区块</string>
     <string name="zichan_detail_tiime">时间</string>
-    <string name="zichan_detail_beizhu">备注</string>
+    <string name="zichan_detail_beizhu">Memo</string>
 
     <string name="wallet_list_title">钱包列表</string>
     <string name="wallet_adss_title">钱包地址</string>
@@ -114,7 +114,7 @@
     <string name="about_ws_wt">常见问题</string>
     <string name="about_ws_visoninfo">版本信息</string>
     <string name="add_zichan_title">添加资产</string>
-    <string name="wallet_no_action">钱包未激活</string>
+    <string name="wallet_no_action">请通过他人转账激活钱包</string>
     <string name="wallet_cancel_success">取消授信成功</string>
     <string name="wallet_shouxi_success">授信成功</string>
     <string name="shouxin_xuzhi">须知：</string>
@@ -165,7 +165,7 @@
     <string name="wallet_da_">刪除钱包</string>
     <string name="accept_address">接收地址</string>
     <string name="available_1000_sde">可转 %1$s %2$s</string>
-    <string name="memo_optional">备注(选填)</string>
+    <string name="memo_optional">Memo(选填)</string>
     <string name="order_trade_buy">买</string>
     <string name="order_trade_sell">卖</string>
 
@@ -184,4 +184,7 @@
     <string name="trade_detail_statue">状态</string>
     <string name="trade_detail_result">交易结果</string>
     <string name="trade_select_jiid">选择交易对</string>
+
+
+    <string name="wallet_type" translatable="false">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefjhigklmnopqrstuvwxyz0123456789~!@#$%^&amp;*()_+</string>
 </resources>

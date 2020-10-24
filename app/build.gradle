@@ -49,10 +49,10 @@ android {
         }
         debug{
             applicationIdSuffix ".debug"
-            buildConfigField("String", "BASE_URL", "\"http://101.32.183.23:18080\"")
-            resValue("string","appNameX","MTCWallet_test")
-//            buildConfigField("String", "BASE_URL", "\"https://wapi.metcalfe.network\"")
-//            resValue("string","appNameX","MTCWallet")
+//            buildConfigField("String", "BASE_URL", "\"http://101.32.183.23:18080\"")
+//            resValue("string","appNameX","MTCWallet_test")
+            buildConfigField("String", "BASE_URL", "\"https://wapi.metcalfe.network\"")
+            resValue("string","appNameX","MTCWallet")
             signingConfig signingConfigs.wangdada
         }
     }

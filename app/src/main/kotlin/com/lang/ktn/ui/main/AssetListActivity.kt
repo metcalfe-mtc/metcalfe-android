@@ -89,7 +89,7 @@ class AssetListActivity : BaseActivity() {
                     if (doMoney.compareTo(dongjie) == -1) {
                         dongjie = doMoney
                     }
-                    txt_dongjie.setText(getString(R.string.asset_bi_dongjie) + dongjie)
+                    txt_dongjie.setText(getString(R.string.asset_bi_dongjie)+" " + dongjie)
 
                     txt_vail_money.setText(getVailMoney(doMoney, dongjie))
                 }

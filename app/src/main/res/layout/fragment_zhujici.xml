@@ -49,6 +49,7 @@
             android:background="@null"
             android:lines="1"
             android:maxLength="16"
+            android:digits="@string/wallet_type"
             android:inputType="textPassword"
             android:textSize="14sp"
             android:hint="@string/import_wallet_psd1">
@@ -88,6 +89,7 @@
             android:layout_weight="1"
             android:background="@null"
             android:lines="1"
+            android:digits="@string/wallet_type"
             android:inputType="textPassword"
             android:textSize="14sp"
             android:maxLength="16"

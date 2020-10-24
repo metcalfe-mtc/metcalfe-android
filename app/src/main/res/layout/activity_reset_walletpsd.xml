@@ -69,6 +69,7 @@
             android:layout_height="46dp"
             android:layout_weight="1"
             android:background="@null"
+            android:digits="@string/wallet_type"
             android:lines="1"
             android:maxLength="16"
             android:inputType="textPassword"
@@ -111,6 +112,7 @@
             android:background="@null"
             android:lines="1"
             android:maxLength="16"
+            android:digits="@string/wallet_type"
             android:textSize="14sp"
             android:inputType="textPassword"
             android:hint="@string/reset_jy_agin_psd"></EditText>

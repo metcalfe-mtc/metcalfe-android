@@ -114,7 +114,7 @@
     <string name="about_ws_wt">FAQ</string>
     <string name="about_ws_visoninfo">Version</string>
     <string name="add_zichan_title">Add Asset</string>
-    <string name="wallet_no_action">Wallet is not activated</string>
+    <string name="wallet_no_action">Please activate the wallet by transfer from others</string>
     <string name="wallet_cancel_success">Cancellation of credit</string>
     <string name="wallet_shouxi_success">Credit success</string>
     <string name="shouxin_xuzhi">Notice：</string>
