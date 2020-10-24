@@ -62,7 +62,7 @@
     <string name="dialog_psd_input_psd">请输入钱包密码</string>
     <string name="dialog_psd_ok">确定</string>
     <string name="asset_bi_title">转账</string>
-    <string name="asset_bi_zichanbuzu">资产补足，无法转账</string>
+    <string name="asset_bi_zichanbuzu">资产不足，无法转账</string>
     <string name="asset_bi_pleate_wiht">请稍等转账</string>
     <string name="asset_bi_dongjie">冻结 </string>
     <string name="asset_bi_keyong">可用</string>
