@@ -11,6 +11,7 @@ class HomeAsset() : Parcelable{
     var balance: String? = "";
     var baseFee: String? = "";
     var decimals: Int?=0
+    var decimalsLimit: Int?=0
     var flags: Int ?=0
     var ledgerIndex: Int?=0
     var ownerCount: Int?=0
@@ -24,6 +25,7 @@ class HomeAsset() : Parcelable{
         balance = parcel.readString()
         baseFee = parcel.readString()
         decimals = parcel.readValue(Int::class.java.classLoader) as? Int
+        decimalsLimit = parcel.readValue(Int::class.java.classLoader) as? Int
         flags = parcel.readValue(Int::class.java.classLoader) as? Int
         ledgerIndex = parcel.readValue(Int::class.java.classLoader) as? Int
         ownerCount = parcel.readValue(Int::class.java.classLoader) as? Int
@@ -38,6 +40,7 @@ class HomeAsset() : Parcelable{
         parcel.writeString(balance)
         parcel.writeString(baseFee)
         parcel.writeValue(decimals)
+        parcel.writeValue(decimalsLimit)
         parcel.writeValue(flags)
         parcel.writeValue(ledgerIndex)
         parcel.writeValue(ownerCount)

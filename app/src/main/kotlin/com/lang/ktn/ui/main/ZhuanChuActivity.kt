@@ -331,6 +331,10 @@ class ZhuanChuActivity : BaseActivity() {
                             val doMoney=getBalanceMoney(it.balance!!)
                             mMoney=doMoney.subtract(dongjie).stripTrailingZeros().toPlainString()
 
+                            edt_moeny_input.setFilters(arrayOf<InputFilter>(NumInputFilter(16,
+                                it.decimals!!
+                            )))
+
                             edt_moeny_input.setHint(String.format(getString(R.string.available_1000_sde),mMoney.toString(), homeasset?.currency))
                         }
                     } catch (E: Exception) {
@@ -368,6 +372,10 @@ class ZhuanChuActivity : BaseActivity() {
                         var b1 = it[index];
                         if (homeasset!!.currency == b1.currency) {
                             val xa = b1.balance!!.toDouble();
+                            edt_moeny_input.setFilters(arrayOf<InputFilter>(NumInputFilter(16,
+                                b1.decimalsLimit!!
+                            )))
+
                             if (xa < 0) {
                                 mMoney = "0"
 //                                edt_moeny_input.setHint("0")

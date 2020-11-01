@@ -99,7 +99,7 @@ class AssetsFragment:BaseFragment() {
                 val intent = Intent(activity, WalletAssetActivity::class.java)
                 intent.putExtra("data", sqladdres)
                 intent.putExtra("lines", lines)
-                startActivity(intent)
+                startActivityForResult(intent,1001)
             }
         }
 //        layout_addres.setOnClickListener {//当前钱包的地址
@@ -130,6 +130,13 @@ class AssetsFragment:BaseFragment() {
 
     }
 
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode==1001){
+            initData(false)
+        }
+    }
     private fun accountInfo(map: Map<String, String>) {
         retrofit<HomeAsset> {
             api = Api.instance.service.accountInfo(map)
