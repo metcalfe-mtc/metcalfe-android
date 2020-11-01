@@ -2,6 +2,7 @@ package com.lang.ktn.ui.main
 
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
@@ -168,30 +169,33 @@ class MainActivity : BaseActivity() {
             //设置下载过程的监听
             .setOnDownloadListener(object : OnDownloadListener {
                 override fun start() {
+                    Log.d("download_apk","start")
 
                 }
 
                 override fun downloading(max: Int, progress: Int) {
+                    Log.d("download_apk","downloading"+progress)
 
                 }
 
                 override fun done(apk: File) {
+                    Log.d("download_apk","done")
 
                 }
 
                 override fun cancel() {
-
+                    Log.d("download_apk","cancel")
                 }
 
                 override fun error(e: Exception) {
-
+                    Log.d("download_apk",e.message)
                 }
             })
 
         val manager = DownloadManager.getInstance(this)
         manager.setApkName("feniq.apk")
             .setApkUrl(bean.url)
-            .setSmallIcon(R.mipmap.ic_launcher_op)
+            .setSmallIcon(R.drawable.app_icon)
             .setShowNewerToast(true)
             .setConfiguration(configuration)
             .setApkVersionCode(BuildConfig.VERSION_CODE + 1)

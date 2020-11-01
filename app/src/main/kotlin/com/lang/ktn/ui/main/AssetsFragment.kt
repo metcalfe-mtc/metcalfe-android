@@ -84,7 +84,7 @@ class AssetsFragment:BaseFragment() {
             intent.putExtra("data",it)
             intent.putExtra("sqladdres",sqladdres)
             intent.putExtra("currency",sqladdres!!.address)
-            startActivity(intent)
+            startActivityForResult(intent,1001)
         }
 
         wallet_save.setOnClickListener {//授信

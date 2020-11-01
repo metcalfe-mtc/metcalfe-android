@@ -40,6 +40,7 @@ import kotlinx.android.synthetic.main.fragment_mine.*
 import kotlinx.android.synthetic.main.fragment_mine.txt_info
 import kotlinx.android.synthetic.main.fragment_zhujici.*
 import kotlinx.android.synthetic.main.nav_layout.*
+import org.jetbrains.anko.support.v4.configuration
 import java.io.File
 import java.lang.Exception
 
@@ -185,7 +186,7 @@ class MineFragment : BaseFragment() {
         val manager = DownloadManager.getInstance(activity)
         manager.setApkName("feniq.apk")
             .setApkUrl(bean.url)
-            .setSmallIcon(R.mipmap.ic_launcher_op)
+            .setSmallIcon(R.drawable.app_icon)
             .setShowNewerToast(true)
             .setConfiguration(configuration)
             .setApkVersionCode(BuildConfig.VERSION_CODE + 1)
