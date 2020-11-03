@@ -51,6 +51,7 @@
     <string name="main_table_jiaoyi">交易</string>
     <string name="main_table_mine">我的</string>
     <string name="main_asset_shouxin">授信</string>
+    <string name="main_asset_shouxin_cancel">取消授信</string>
     <string name="main_asset_zichan">资产</string>
     <string name="main_asset_num">数量</string>
     <string name="main_mine_guanli">钱包管理</string>
@@ -87,7 +88,10 @@
     <string name="zichan_detail_success_staue">成功</string>
     <string name="zichan_detail_shoukuanfang">收款方</string>
     <string name="zichan_detail_fukuanafng">付款方</string>
+    <string name="zichan_detail_faxingfang">发行方</string>
+    <string name="zichan_detail_faxingshang">发行商</string>
     <string name="zichan_detail_jine">金额</string>
+    <string name="zichan_detail_currency">币种</string>
     <string name="zichan_detail_fee">手续费</string>
     <string name="zichan_detail_jiaoyi_leixa">交易类型</string>
     <string name="zichan_detail_stutae">状态</string>
@@ -185,6 +189,7 @@
     <string name="trade_detail_result">交易结果</string>
     <string name="trade_select_jiid">选择交易对</string>
 
+    <string name="app_update_msg">下载失败，请重新下载或到官网下载</string>
 
     <string name="wallet_type" translatable="false">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefjhigklmnopqrstuvwxyz0123456789~!@#$%^&amp;*()_+</string>
 </resources>

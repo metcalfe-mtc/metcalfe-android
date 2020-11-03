@@ -40,7 +40,6 @@ import kotlinx.android.synthetic.main.fragment_mine.*
 import kotlinx.android.synthetic.main.fragment_mine.txt_info
 import kotlinx.android.synthetic.main.fragment_zhujici.*
 import kotlinx.android.synthetic.main.nav_layout.*
-import org.jetbrains.anko.support.v4.configuration
 import java.io.File
 import java.lang.Exception
 

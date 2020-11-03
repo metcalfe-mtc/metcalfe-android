@@ -80,17 +80,41 @@ class AssetListDeatilActivity: BaseActivity() {
             api = Api.instance.service.transactionTx(hash!!)
             onSuccess{ bean: HashTx?, code: String, msg: String->
                 bean?.let {
-                    txt_shouKuan_addres.setText(it.destination)
-                    txt_fuKuan_addres.setText(it.account )
 
-                    if(TextUtils.isEmpty(it.amount?.currency)){
 
-                        var allMoeny =
-                            it.amount?.value?.toLong()!!.div(Math.pow(10.0, it.amount.decimals.toDouble()))
-                                .toString()
-                        txt_jine.setText(allMoeny.toBigDecimal().stripTrailingZeros().toPlainString()+" "+ Constant.CURRN)
-                    }else{
-                        txt_jine.setText(it.amount?.value?.toBigDecimal().stripTrailingZeros().toPlainString() +" "+ it.amount?.currency)
+                    if ("TrustSet"==it.transactionType){
+                        tv_fukuanfang.setText(getString(R.string.zichan_detail_faxingfang))
+                        tv_shoukuanfang.setText(getString(R.string.zichan_detail_faxingshang))
+                        txt_shouKuan_addres.setText(it.limitAmount.issuer)
+                        txt_fuKuan_addres.setText(it.account )
+                        tv_amount_currency.setText(getString(R.string.zichan_detail_currency))
+                        if (TextUtils.isEmpty(it.limitAmount?.currency)) {
+                            txt_jine.setText("M")
+                        } else {
+                            txt_jine.setText(it.limitAmount?.currency)
+                        }
+                    }else {
+                        tv_amount_currency.setText(getString(R.string.zichan_detail_jine))
+                        tv_fukuanfang.setText(getString(R.string.zichan_detail_fukuanafng))
+                        tv_shoukuanfang.setText(getString(R.string.zichan_detail_shoukuanfang))
+                        txt_shouKuan_addres.setText(it.destination)
+                        txt_fuKuan_addres.setText(it.account )
+                        if (TextUtils.isEmpty(it.amount?.currency)) {
+
+                            var allMoeny =
+                                it.amount?.value?.toLong()!!
+                                    .div(Math.pow(10.0, it.amount.decimals.toDouble()))
+                                    .toString()
+                            txt_jine.setText(
+                                allMoeny.toBigDecimal().stripTrailingZeros()
+                                    .toPlainString() + " " + Constant.CURRN
+                            )
+                        } else {
+                            txt_jine.setText(
+                                it.amount?.value?.toBigDecimal().stripTrailingZeros()
+                                    .toPlainString() + " " + it.amount?.currency
+                            )
+                        }
                     }
 
                     var fee = it.fee?.toLong().div(Math.pow(10.0, 6.0)).toString()

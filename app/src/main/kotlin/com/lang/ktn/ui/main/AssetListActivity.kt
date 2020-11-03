@@ -89,7 +89,7 @@ class AssetListActivity : BaseActivity() {
                     if (doMoney.compareTo(dongjie) == -1) {
                         dongjie = doMoney
                     }
-                    txt_dongjie.setText(getString(R.string.asset_bi_dongjie)+" " + dongjie)
+                    txt_dongjie.setText(getString(R.string.asset_bi_dongjie) + " " + dongjie)
 
                     txt_vail_money.setText(getVailMoney(doMoney, dongjie))
                 }
@@ -152,7 +152,7 @@ class AssetListActivity : BaseActivity() {
     private fun transactionAccountHistoryList() {
         var mapmu = mutableMapOf<String, String>()
         mapmu["account"] = currency!!
-        mapmu["limit"] = "10"
+        mapmu["limit"] = "50"
         if (!TextUtils.isEmpty(mMarker)) {
             mapmu["marker"] = mMarker
         }
@@ -160,11 +160,12 @@ class AssetListActivity : BaseActivity() {
             mapmu["issuer"] = issuer
         }
         retrofit<Transactions> {
-            api = Api.instance.service.paymentHistoryList(mapmu)
+            api = Api.instance.service.transactionAccount(mapmu)
             onSuccess { bean: Transactions?, code: String, msg: String ->
 
                 if (refreshLayout_aas != null) {
                     refreshLayout_aas.finishRefresh();
+                    refreshLayout_aas.finishLoadMore()
                 }
                 bean?.let {
                     try {
@@ -173,11 +174,22 @@ class AssetListActivity : BaseActivity() {
                             refreshLayout_aas.setEnableLoadMore(false)
                         } else {
                             mMarker = bean.marker
+                            refreshLayout_aas.setEnableLoadMore(true)
+
                         }
 
 
                         if (bean.transactions != null) {
-                            transactions!!.addAll(bean.transactions)
+                            if ("M".equals(homeasset?.currency)) {
+                                transactions!!.addAll(bean.transactions.filter {
+                                    ("Payment" == it.transactionType && TextUtils.isEmpty(it.amount.currency))||("TrustSet"==it.transactionType&& TextUtils.isEmpty(it.limitAmount.currency))
+                                })
+                            } else {
+                                transactions!!.addAll(bean.transactions.filter {
+                                    ("Payment" == it.transactionType && homeasset?.currency.equals(it.amount.currency))||("TrustSet"==it.transactionType&& homeasset?.currency.equals(it.limitAmount.currency))
+                                })
+                            }
+//                            transactions!!.addAll(bean.transactions)
                             recycle_list_info.adapter?.notifyDataSetChanged()
                             transactions?.let {
                                 if (it.size > 0) {
@@ -193,6 +205,7 @@ class AssetListActivity : BaseActivity() {
             onFail { t: Transactions?, code: String, msg: String ->
                 if (refreshLayout_aas != null) {
                     refreshLayout_aas.finishRefresh();
+                    refreshLayout_aas.finishLoadMore()
                 }
             }
         }

@@ -3,6 +3,7 @@ package com.lang.ktn.bean.resp
 data class   HashTx(
     val account: String,
     val amount: Amount,
+    val limitAmount: LimitAmount,
     val date: Long,
     val destination: String,
     val fee: String,

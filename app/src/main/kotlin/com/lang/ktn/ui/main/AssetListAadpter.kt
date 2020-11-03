@@ -5,6 +5,7 @@ import android.text.TextUtils
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.*
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
@@ -49,12 +50,24 @@ class AssetListAadpter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val bean = weekForecast[position]
-        if (currency == bean.account) {
-            holder.txt_churu.setText(R.string.zichan_list_zhuanchu)
-            holder.txt_churu.setTextColor(Color.BLUE)
+        if ("Payment" == bean.transactionType) {
+//            holder.itemView.isEnabled = true
+            if (currency == bean.account) {
+                holder.txt_churu.setText(R.string.zichan_list_zhuanchu)
+                holder.txt_churu.setTextColor(Color.BLUE)
+            } else {
+                holder.txt_churu.setText(R.string.zichan_list_zhuanru)
+                holder.txt_churu.setTextColor(Color.RED)
+            }
         } else {
-            holder.txt_churu.setText(R.string.zichan_list_zhuanru)
-            holder.txt_churu.setTextColor(Color.RED)
+//            holder.itemView.isEnabled = false
+            if ("0".equals(bean.limitAmount.value)) {
+                holder.txt_churu.setText(R.string.main_asset_shouxin_cancel)
+                holder.txt_churu.setTextColor(Color.BLACK)
+            } else {
+                holder.txt_churu.setText(R.string.main_asset_shouxin)
+                holder.txt_churu.setTextColor(Color.BLACK)
+            }
         }
         holder.txt_coin_time.setText(getTextName(bean.date))
 
@@ -64,42 +77,51 @@ class AssetListAadpter(
             holder.txt_coin_asset_s.setText(R.string.zichan_list_fail)
         }
 
-        if (TextUtils.isEmpty(bean.amount?.currency)) {
-            var allMoeny =
-                bean.amount?.value?.toLong()!!.div(Math.pow(10.0, bean.amount.decimals.toDouble()))
-                    .toString()
-            if (currency == bean.account) {
-                holder.txt_icon_jine.setText(
-                    "- " + allMoeny.toBigDecimal().stripTrailingZeros().toPlainString()
-                ) // + Constant.CURRN
-            } else {
-                holder.txt_icon_jine.setText(
-                    "+ " + allMoeny.toBigDecimal().stripTrailingZeros().toPlainString()
-                ) // + Constant.CURRN
-            }
+        if ("Payment" == bean.transactionType) {
+            holder.txt_icon_jine.visibility = VISIBLE
 
-        } else if ("M".equals(bean.amount?.currency)) {
-            if (currency == bean.account) {
-                holder.txt_icon_jine.setText(
-                    "- " + bean.amount?.value?.toBigDecimal().divide(BigDecimal("1000000"))
-                        .stripTrailingZeros().toPlainString()
-                )// + bean.amount?.currency
+            if (TextUtils.isEmpty(bean.amount?.currency)) {
+                var allMoeny =
+                    bean.amount?.value?.toLong()!!
+                        .div(Math.pow(10.0, bean.amount.decimals.toDouble()))
+                        .toString()
+                if (currency == bean.account) {
+                    holder.txt_icon_jine.setText(
+                        "- " + allMoeny.toBigDecimal().stripTrailingZeros().toPlainString()
+                    ) // + Constant.CURRN
+                } else {
+                    holder.txt_icon_jine.setText(
+                        "+ " + allMoeny.toBigDecimal().stripTrailingZeros().toPlainString()
+                    ) // + Constant.CURRN
+                }
+
+            } else if ("M".equals(bean.amount?.currency)) {
+                if (currency == bean.account) {
+                    holder.txt_icon_jine.setText(
+                        "- " + bean.amount?.value?.toBigDecimal().divide(BigDecimal("1000000"))
+                            .stripTrailingZeros().toPlainString()
+                    )// + bean.amount?.currency
+                } else {
+                    holder.txt_icon_jine.setText(
+                        "+ " + bean.amount?.value?.toBigDecimal().divide(BigDecimal("1000000"))
+                            .stripTrailingZeros().toPlainString()
+                    )// + bean.amount?.currency
+                }
             } else {
-                holder.txt_icon_jine.setText(
-                    "+ " + bean.amount?.value?.toBigDecimal().divide(BigDecimal("1000000"))
-                        .stripTrailingZeros().toPlainString()
-                )// + bean.amount?.currency
+                if (currency == bean.account) {
+                    holder.txt_icon_jine.setText(
+                        "- " + bean.amount?.value?.toBigDecimal().stripTrailingZeros()
+                            .toPlainString()
+                    )// + bean.amount?.currency
+                } else {
+                    holder.txt_icon_jine.setText(
+                        "+ " + bean.amount?.value?.toBigDecimal().stripTrailingZeros()
+                            .toPlainString()
+                    )// + bean.amount?.currency
+                }
             }
-        } else {
-            if (currency == bean.account) {
-                holder.txt_icon_jine.setText(
-                   "- "+ bean.amount?.value?.toBigDecimal().stripTrailingZeros().toPlainString()
-                )// + bean.amount?.currency
-            }else{
-                holder.txt_icon_jine.setText(
-                    "+ "+ bean.amount?.value?.toBigDecimal().stripTrailingZeros().toPlainString()
-                )// + bean.amount?.currency
-            }
+        }else{
+            holder.txt_icon_jine.visibility = INVISIBLE
         }
         holder.itemView.setOnClickListener {
             itemClick(bean)

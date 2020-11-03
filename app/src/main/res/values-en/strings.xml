@@ -51,6 +51,7 @@
     <string name="main_table_jiaoyi">Transaction</string>
     <string name="main_table_mine">Profile</string>
     <string name="main_asset_shouxin">Credit</string>
+    <string name="main_asset_shouxin_cancel">Cancel Credit</string>
     <string name="main_asset_zichan">Assets</string>
     <string name="main_asset_num">Amount</string>
     <string name="main_mine_guanli">Wallet Management</string>
@@ -87,7 +88,10 @@
     <string name="zichan_detail_success_staue">Success</string>
     <string name="zichan_detail_shoukuanfang">To</string>
     <string name="zichan_detail_fukuanafng">From</string>
+    <string name="zichan_detail_faxingfang">Account</string>
+    <string name="zichan_detail_faxingshang">Issuer</string>
     <string name="zichan_detail_jine">Amount</string>
+    <string name="zichan_detail_currency">Currency</string>
     <string name="zichan_detail_fee">Fee</string>
     <string name="zichan_detail_jiaoyi_leixa">Type</string>
     <string name="zichan_detail_stutae">Status</string>
@@ -185,4 +189,7 @@
     <string name="trade_detail_statue">Status</string>
     <string name="trade_detail_result">Transaction Result</string>
     <string name="trade_select_jiid">Select Trading Pair</string>
+
+    <string name="app_update_msg">Download failed, please download again or download from official website</string>
+
 </resources>

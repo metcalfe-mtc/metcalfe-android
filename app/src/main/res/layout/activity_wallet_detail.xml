@@ -32,6 +32,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/tv_fukuanfang"
                     android:layout_marginTop="8dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -75,6 +76,7 @@
 
 
                 <TextView
+                    android:id="@+id/tv_shoukuanfang"
                     android:layout_marginTop="8dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -143,6 +145,7 @@
 
 
                     <TextView
+                        android:id="@+id/tv_amount_currency"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="#ffffff"

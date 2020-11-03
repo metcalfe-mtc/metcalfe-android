@@ -37,7 +37,7 @@ class ToastUtil {
                 //                                       DisplayMetrics metrics
                 val yOffset= android.util.TypedValue.applyDimension(COMPLEX_UNIT_DIP,56f,ctx.resources.displayMetrics)
                 mToast!!.setGravity(Gravity.CENTER, 0, -yOffset.toInt())//设置toast显示的位置，这是居中
-                mToast!!.duration = Toast.LENGTH_SHORT//设置toast显示的时长
+                mToast!!.duration = Toast.LENGTH_LONG//设置toast显示的时长
                 val _root =
                     LayoutInflater.from(ctx).inflate(R.layout.layout_toast, null)//自定义样式，自定义布局文件
                 mTvToast = _root.findViewById<View>(R.id.txt_toast) as TextView
