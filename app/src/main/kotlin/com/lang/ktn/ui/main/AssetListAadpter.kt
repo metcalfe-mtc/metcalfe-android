@@ -54,7 +54,7 @@ class AssetListAadpter(
 //            holder.itemView.isEnabled = true
             if (currency == bean.account) {
                 holder.txt_churu.setText(R.string.zichan_list_zhuanchu)
-                holder.txt_churu.setTextColor(Color.BLUE)
+                holder.txt_churu.setTextColor(holder.itemView.resources.getColor(R.color.trade_blue,null))
             } else {
                 holder.txt_churu.setText(R.string.zichan_list_zhuanru)
                 holder.txt_churu.setTextColor(Color.RED)
@@ -63,10 +63,10 @@ class AssetListAadpter(
 //            holder.itemView.isEnabled = false
             if ("0".equals(bean.limitAmount.value)) {
                 holder.txt_churu.setText(R.string.main_asset_shouxin_cancel)
-                holder.txt_churu.setTextColor(Color.BLACK)
+                holder.txt_churu.setTextColor(holder.itemView.resources.getColor(R.color.trade_blue,null))
             } else {
                 holder.txt_churu.setText(R.string.main_asset_shouxin)
-                holder.txt_churu.setTextColor(Color.BLACK)
+                holder.txt_churu.setTextColor(Color.RED)
             }
         }
         holder.txt_coin_time.setText(getTextName(bean.date))

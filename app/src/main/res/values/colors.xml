@@ -11,4 +11,6 @@
     <dimen name="jiaoyu">25dp</dimen>
     <integer name="psdsize">8</integer>
     <color name="trade_green">#6fb488</color>
+    <color name="trade_blue">#004EFE</color>
+    <color name="trade_red">#FF0000</color>
 </resources>
